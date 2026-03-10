@@ -1,0 +1,146 @@
+html{
+    overflow-y: scroll; /* scrollbar sempre visível */
+}
+body{
+    margin:0;
+    padding-top: 100px; /* espaço reservado para os navbars fixos */
+    font-family:Arial, Helvetica, sans-serif;
+}
+#carouselExample{
+    margin-top: 10px;
+}
+
+/* navbar fixas com offset para não se sobrepor */
+.topbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+}
+.main-navbar {
+    position: fixed;
+    top: 25px; /* ajuste conforme altura real da topbar */
+    width: 100%;
+    left: 0;
+    z-index: 999;
+}
+.category-navbar {
+    position: fixed;
+    top: 80px; /* desloca mais para baixo, abaixo do main-navbar */
+    width: 100%;
+    left: 0;
+    z-index: 1001; /* acima de tudo para não ficar escondida */
+}   /* garante que fiquem empilhadas corretamente */
+
+/* NAVBAR SUPERIOR */
+
+.topbar{
+background: #252525;;
+color:white;
+font-size:13px;
+padding:5px 0;
+}
+
+.topbar a{
+color:white;
+text-decoration:none;
+margin-right:15px;
+}
+
+/* social 'Siga-nos' */
+.topbar .social-links a {
+    margin-left: 0.1rem;
+    font-size: 1rem;
+}
+/* cores distintas por rede */
+.topbar .social-links a.linkedin { color: #0e76a8; /* LinkedIn blue */ }
+.topbar .social-links a.github   { color: #333;      /* GitHub dark gray */ }
+.topbar .social-links a.instagram{ color: #E1306C; /* Instagram magenta */ }
+
+/* hover individualizado */
+.topbar .social-links a.linkedin:hover  { color: #084c75; }
+.topbar .social-links a.github:hover    { color: #000; }
+.topbar .social-links a.instagram:hover { color: #ad1457; }
+
+.topbar .social-links a:hover {
+    opacity: 0.8;
+}
+
+/* keep topbar links on a single line */
+.topbar .container {
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+/* NAVBAR PRINCIPAL */
+
+.main-navbar{
+background:#252525;
+padding:10px 0;
+color:white;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.search-box{
+width:100%;
+max-width:500px;
+}
+
+.cart{
+font-size:25px;
+}
+
+
+/* NAVBAR CATEGORIAS */
+
+.category-navbar {
+    display: flex;
+    font-size: 13px;
+    justify-content: center;
+    background: #252525;
+    padding: 6px 0;
+}
+
+
+.category-navbar a{
+text-decoration:none;
+background: #252525;
+font-size: 13px;
+color:white;
+margin-right:20px;
+font-weight:bold;
+}
+.category-navbar .container{
+display: flex;
+background: #252525;
+align-items: center;
+justify-content: center;
+gap: 2px;
+}
+/* CSS de Cadastro */
+.container-Cadastro {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin: 120px auto 70px; /* espaço para navbars acima e footer abaixo */
+    max-width: 800px;
+    width: calc(100% - 40px);
+    border-radius: 25px;
+    background: #f8f9fa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.footer .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
